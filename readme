@@ -1,1 +1,11 @@
-This script is for paper "SMAEDS: SPF Macro Based Abnormal Email Detection System".
+This project is for paper "SMAEDS: SPF Macro Based Abnormal Email Detection System".
+
+The source code is in /SMAEDS.
+
+You should use Bind9 to build a local DNS server, configure it and bind that server to a public available domain, for example dnstest.com. After that all SPF verification information of illegal emails will be sent to that DNS server.
+
+The ssmtp service also needs to be configured on this server. When alarm messages appear, the system will automatically invoke the ssmtp service to send event detection reports to the specified administrator mailbox.
+
+Add statements to the original SPF record using SPF's macro mechanism, and add SPF record as follows.
+
+include:%{i}_id_%{l}_dm_%{o}_host_%{h}_domain_%{d}_.XXX.com
