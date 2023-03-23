@@ -1,7 +1,9 @@
-This project is for paper "An SPF and DMARC based Large-scale and Empirical Study of Email Security".
-
 The source code is in /SMAEDS.
 
+## Main Purpose
+This method is mainly used to help domain administrators detect attacks that attempt to use the domain name to send spoofed emails to the public in a timely manner.
+
+## How To Deploy
 You should use Bind9 to build a local DNS server, configure it and bind that server to a public available domain, for example dnstest.com. After that all SPF verification information of illegal emails will be sent to that DNS server.
 
 The ssmtp service also needs to be configured on this server. When alarm messages appear, the system will automatically invoke the ssmtp service to send event detection reports to the specified administrator mailbox.
