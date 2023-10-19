@@ -1,4 +1,7 @@
 # SMAESD
+
+This work is part of our paper **"Subdomain Protection is Needed: An SPF and DMARC-based Empirical Measurement Study and Proactive Solution of Email Security"**. This paper has been accepted by **the 42nd International Symposium on Reliable Distributed Systems (SRDS 2023)**.
+
 The source code is in /SMAEDS.
 
 ## Main Purpose
